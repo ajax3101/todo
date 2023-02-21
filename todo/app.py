@@ -7,3 +7,4 @@ app.mount('/static', StaticFiles(directory='todo/static'), name='static')
 templates = Jinja2Templates(directory='todo/templates')
 
 from todo.routes import home
+

@@ -1,4 +1,5 @@
-from sqlalchemy import Column, String, Boolean, Integer
+from sqlalchemy import Column, String, Integer, Boolean
+
 from todo.database.base import Base, choose_db, check_db
 
 
