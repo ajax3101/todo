@@ -1,10 +1,13 @@
-from todo.database.base import Base
 from sqlalchemy import Column, String, Boolean, Integer
+from todo.database.base import Base, choose_db, check_db
 
 
 class ToDo(Base):
-    __tablename__='todos'
+    __tablename__ = 'todos'
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column (String)
+    title = Column(String)
     is_complete = Column(Boolean, default=False)
+
+
+Base.metadata.create_all(bind=choose_db(arg_db=check_db))
