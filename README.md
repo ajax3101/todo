@@ -16,6 +16,7 @@ git clone https://github.com/ajax3101/todo.git
 ```bash
     python3 -m venv venv
     . venv/bin/activate
+ ```
 
 Устанавливаем модули
 
